@@ -1,3 +1,37 @@
 <%- include('../../components/head.ejs'); %>
-signup
+<%- include('../../components/header.ejs') %>
+<div class="auth_wrapper">
+    <div class="container">
+        <img src="/static/images/auth/auth-img.svg" alt="Img">
+    </div>
+    <div class="container">
+        <h2 class="form-title">Signup</h2>
+        <form action="/auth/signup" method="post" autocomplete="off">
+            <div class="form_input">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" value="" />
+            </div>
+            <div class="form_input">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" value="" />
+            </div>
+            <div class="form_input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="">
+            </div>
+            <div class="form_input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form_input">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword"/>
+            </div>
+            <button type="submit" class="button action margin-top">Signup</button>
+        </form>
+        <p class="action-text">
+            Already have an Account <a href="/login">Sign in here</a>
+        </p>
+    </div>
+</div>
 <%- include('../../components/footer.ejs'); %>

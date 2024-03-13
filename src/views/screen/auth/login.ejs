@@ -1,3 +1,34 @@
 <%- include('../../components/head.ejs'); %>
-login
+<%- include('../../components/header.ejs') %>
+<div class="auth_wrapper">
+    <div class="container">
+        <img src="/static/images/auth/auth-img.svg" alt="Img">
+    </div>
+    <div class="container">
+        <h2 class="form-title">Login</h2>
+        <form action="/auth/login" method="post" autocomplete="off">
+            <div class="form_input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="">
+            </div>
+            <div class="form_input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="split_form">
+                <div class="row small-gap">
+                    <input type="checkbox" name="rememberMe" value="rememberMe" id="checkBox" />
+                    <label for="checkBox">Remember Me</label>
+                </div>
+                <div class="row end">
+                    <a href="">Forgot Password?</a>
+                </div>
+            </div>
+            <button type="submit" class="button action">Login</button>
+        </form>
+        <p class="action-text">
+            Don't have an account? <a href="/signup">Sign up here</a>
+        </p>
+    </div>
+</div>
 <%- include('../../components/footer.ejs'); %>
