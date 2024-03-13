@@ -2,11 +2,11 @@
   "name": "shortyurl",
   "version": "1.0.0",
   "description": "ShortyURL: The Ultimate URL Management Solution",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js,ejs .",
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",

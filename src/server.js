@@ -4,10 +4,10 @@ const express = require('express');
 const path = require('path');
 
 //Import Files
-const logger = require('./src/middleware/loggerMiddleware');
-const mysql = require('./src/modules/_mysqlConnection');
-const getRoutes = require('./src/routes/getRoutes');
-const postRoutes = require('./src/routes/postRoutes');
+const logger = require('./middleware/loggerMiddleware');
+const mysql = require('./modules/_mysqlConnection');
+const getRoutes = require('./routes/getRoutes');
+const postRoutes = require('./routes/postRoutes');
 
 const { sequelize } = mysql;
 
@@ -28,7 +28,7 @@ mysql.sequelize.sync()
 
 // view engine setup
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, './views/screen'));
 
 //Static
 app.use('/static', express.static(path.join(__dirname, '_public')));
@@ -40,10 +40,10 @@ app.use('/api', postRoutes);
 // Define global 404 error handler middleware
 app.use((req, res) => {
     const payload = {
-        pageTitle: 'Tiny Url | 404'
+        pageTitle: 'Shorty Url | 404'
     }
 
-    res.status(404).render('pages/error/404', payload);
+    res.status(404).render('error/404', payload);
 });
 
 

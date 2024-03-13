@@ -1,0 +1,57 @@
+<%- include('../components/head.ejs') %>
+<header>
+    <h3 class="logo">
+        Shorty Url
+    </h3>
+    <ul class="nav">
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">Blog</a>
+        </li>
+        <li>
+            <a href="">FAQ</a>
+        </li>
+        <li>
+            <a href="">About Us</a>
+
+        </li>
+    </ul>
+    <ul class="nav">
+        <li>
+            <a href="" class="button outlined">Pricing</a>
+        </li>
+        <li>
+            <a href="/signup" class="button outlined">Sign up</a>
+        </li>
+        <li>
+            <a href="/login" class="button outlined">Login</a>
+        </li>
+    </ul>
+</header>
+<div class="hero-wrapper">
+    <div class="hero-section">
+        <p class="hero-subTitle">
+            Simplify Your Links
+        </p>
+        <h1 class="hero-title">
+            Make Every Link Matter
+        </h1>
+        <p class="hero-text">
+            Elevate your sharing strategy with Shorty Url, the ultimate link management platform. Shorten, brand, and track your links with ease, and unlock the full potential of your digital presence.
+        </p>
+        <a href="/signup" class="button action">Get Started</a>
+    </div>
+</div>
+<div class="main-section">
+    <form action="" method="post" class="form flex-center flex-column" autocomplete="off">
+        <div class="form-controller">
+            <label for="url"></label>
+            <input type="text" name="url" id="url" placeholder="Enter URL">
+            <button type="submit" class="button joined-form-button">Shorten</button>
+        </div>
+        <p>By using our service you accept the Terms and conditions and Privacy.</p>
+    </form>
+</div>
+<%- include('../components/footer.ejs') %>
