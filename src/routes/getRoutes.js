@@ -1,14 +1,22 @@
 const router = require('express').Router();
 
 const {
-    mainHomeScreen,
+    mainScreen,
     loginScreen,
     signupScreen,
+    userHomeScreen,
+    urlHomeScreen,
+    qrHomeScreen,
 } = require('../controller/getController');
 
 
-router.get('/', mainHomeScreen);
+router.get('/', mainScreen);
 router.get('/login', loginScreen);
 router.get('/signup', signupScreen);
+
+//Use Screens
+router.get('/dashboard', userHomeScreen);
+router.get('/url', urlHomeScreen);
+router.get('/QR-Code', qrHomeScreen);
 
 module.exports = router;

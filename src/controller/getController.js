@@ -1,5 +1,5 @@
 
-exports.mainHomeScreen = (req, res) => {
+exports.mainScreen = (req, res) => {
     const payload = {
         pageTitle: 'Shorty Url | Home'
     }
@@ -21,4 +21,28 @@ exports.signupScreen = (req, res) => {
     }
 
     res.render('auth/signup', payload);
+}
+
+exports.userHomeScreen = (req, res) => {
+    const payload = {
+        pageTitle: 'Shorty Url | Signup'
+    }
+
+    res.render('user/home', payload);
+}
+
+exports.urlHomeScreen = (req, res) => {
+    const payload = {
+        pageTitle: 'Shorty Url | URL'
+    }
+
+    res.render('user/url', payload);
+}
+
+exports.qrHomeScreen = (req, res) => {
+    const payload = {
+        pageTitle: 'Shorty Url | QR Code'
+    }
+
+    res.render('user/qrcode', payload);
 }
